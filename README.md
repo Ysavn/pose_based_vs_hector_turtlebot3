@@ -2,10 +2,11 @@
 
 1. Create a new catkin workspace 
 
+'''
 $ mkdir -p ~/dr_ws/src
 $ cd ~/dr_ws/
 $ catkin_make
-
+'''
 
 2. Copy test_gazebo folder into src and do catkin_make
 
