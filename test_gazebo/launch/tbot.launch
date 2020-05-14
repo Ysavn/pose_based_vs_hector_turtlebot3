@@ -1,0 +1,15 @@
+<launch>
+<arg name="robot_name"/>
+<arg name="init_pose"/>
+<arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+<param name="model" value="$(arg model)"/>
+
+<!-- turtlebot3_teleop_key already has its own built in velocity smoother -->
+<node pkg="turtlebot3_teleop" type="turtlebot3_teleop_key" name="turtlebot3_teleop_keyboard"  output="screen">
+</node>
+<node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="$(arg init_pose) -urdf -model turtlebot3_ar -param /tbot_description" />
+
+<node pkg="robot_state_publisher" type="state_publisher" 
+name="robot_state_publisher" output="screen"/>
+</launch>
+
