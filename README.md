@@ -1,5 +1,7 @@
 # pose_based_vs_hector_turtlebot3
 
+### Steps for Visual Servoing of Hector using remodeled Turtlebot3 with AR-Tag on top:
+
 **System**: Ubuntu 18.04, Gazebo 9.0, ROS Melodic
 
 1. Create a new catkin workspace 
